@@ -1,5 +1,5 @@
 .reveal {
-  $smocky_black: rgba(16, 0, 7, 1);
+  $smocky_black: #100007;
   $raisin_black: rgb(63, 56, 56);
   $purple: rgba(43, 1, 30, 1);
   $green: rgba(59, 96, 71, 1);
@@ -16,6 +16,12 @@
       background: none;
       box-shadow: none;
       margin: 0;
+
+      &.bordered {
+        border-radius: 25px;
+        border: 3px dashed rgba(33, 0, 8, 0.36);
+        padding: 5px;
+      }
     }
 
     &.scrollable {
@@ -42,16 +48,19 @@
       h3 {
         padding-bottom: 10px;
       }
+
       .and {
         font-size: 1em;
         padding-bottom: 20px;
       }
+
       img {
         width: 310px;
       }
     }
 
     &.has-dark-background {
+
       h1,
       h2,
       h3,
@@ -63,23 +72,67 @@
     }
 
     ul {
-      font-weight: 100;
-      font-size: 0.7em;
-      color: $raisin_black;
-      padding-left: 25px;
-      font-family: "papaya_sunriseregular", serif;
+      padding-top: 50px;
       list-style: none;
+      margin: 0;
+
       li:before {
+        font-family: Comic Sans MS;
+        vertical-align: top;
         content: "-";
         color: $red;
         position: relative;
-        left: -20px;
-        // font-size: 1.8em;
+        left: -25px;
+      }
+
+      li {
+        padding-bottom: 20px;
+      }
+
+      &.instructions {
+        font-family: roboto_mono, monospace;
+        font-size: 20px;
+        padding: 0;
+
+        a {
+          color: $smocky_black;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+
+        .hint {
+          background-color: #ffcc68;
+          margin-right: 10px;
+          padding: 0 10px 0 10px;
+        }
+
+        li:before {
+          content: "";
+        }
       }
     }
+
+    blockquote {
+      color: $smocky_black;
+      box-shadow: none;
+      font-family: Roboto, serif;
+      font-size: 0.8em;
+      font-style: normal;
+      font-weight: lighter;
+      text-align: left;
+      background: none;
+
+      .mark {
+        background-color: rgb(228, 157, 63);
+      }
+    }
+
     ul.with-pics {
       li {
         margin-bottom: 20px;
+
         img {
           height: 40px;
         }
@@ -92,6 +145,7 @@
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }

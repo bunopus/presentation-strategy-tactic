@@ -7,6 +7,11 @@
   box-shadow: none;
   margin: 0;
 }
+.reveal section img.bordered {
+  border-radius: 25px;
+  border: 3px dashed rgba(33, 0, 8, 0.36);
+  padding: 5px;
+}
 .reveal section.scrollable {
   bottom: 0px;
   overflow-y: auto;
@@ -41,18 +46,52 @@
   color: white;
 }
 .reveal section ul {
-  font-weight: 100;
-  font-size: 0.7em;
-  color: #3f3838;
-  padding-left: 25px;
-  font-family: "papaya_sunriseregular", serif;
+  padding-top: 50px;
   list-style: none;
+  margin: 0;
 }
 .reveal section ul li:before {
+  font-family: Comic Sans MS;
+  vertical-align: top;
   content: "-";
   color: #b82525;
   position: relative;
-  left: -20px;
+  left: -25px;
+}
+.reveal section ul li {
+  padding-bottom: 20px;
+}
+.reveal section ul.instructions {
+  font-family: roboto_mono, monospace;
+  font-size: 20px;
+  padding: 0;
+}
+.reveal section ul.instructions a {
+  color: #100007;
+}
+.reveal section ul.instructions a:hover {
+  text-decoration: underline;
+}
+.reveal section ul.instructions .hint {
+  background-color: #ffcc68;
+  margin-right: 10px;
+  padding: 0 10px 0 10px;
+}
+.reveal section ul.instructions li:before {
+  content: "";
+}
+.reveal section blockquote {
+  color: #100007;
+  box-shadow: none;
+  font-family: Roboto, serif;
+  font-size: 0.8em;
+  font-style: normal;
+  font-weight: lighter;
+  text-align: left;
+  background: none;
+}
+.reveal section blockquote .mark {
+  background-color: #e49d3f;
 }
 .reveal section ul.with-pics li {
   margin-bottom: 20px;
